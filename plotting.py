@@ -47,17 +47,6 @@ def get_payoff_dataframe(population,  payoff_functions, distance_function, outco
     return df
 
 
-
-def template_for_sebastian(tournament):
-    """
-    Discription
-    
-    example:
-        >>>
-    """
-    pass
-
-
 def get_country_df(tournament, add_outcomes=True):
     df = pd.DataFrame([[c.name, c.m, c.e, c.i, c.sqrt_area] for c in list(tournament.graph.nodes)], columns=['name', 'e', 'i', 'sqrt_area']).set_index('name')
     if add_outcomes:
@@ -114,13 +103,13 @@ def get_game_history(tournament, c1, c2):
          (<Action.C: 1>, <Action.D: 0>),
          (<Action.D: 0>, <Action.D: 0>)]
     """
-    # quick fix to be able to get the right countries by using their names as strings
+
     if isinstance(c1, str):
         c1 = [c for c in tournament.countries() if c.name==c1][0]
     if isinstance(c2, str):
         c2 = [c for c in tournament.countries() if c.name==c2][0]
         
-    # Todo: if the name of a country is not in the list of names, then the code above error without clear message
+
     
     
     
