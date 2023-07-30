@@ -365,7 +365,7 @@ def draw_population_delta_fitness(tournament, selecting=[], filtering = [], cmap
     plt.tick_params(axis='both',labelsize=14)     
     
     
-### definitions by Sebastian
+
 def get_rewards(population, payoff_functions, distance_function):
     """
     calculate the payoffs of every country with every other country when both of them cooperate.
