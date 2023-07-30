@@ -17,8 +17,8 @@ class Tournament:
         countries, 
         max_rounds, 
         strategy_list, 
-        payoff_functions=default_payoff_functions, # rewards that countries get, defaults to the functions described in the paper.
-        distance_function = lambda d: d, # defaults to just the identity, if one wanted that distances get less important the larger they are, one could use the sqrt.
+        payoff_functions=default_payoff_functions, 
+        distance_function = lambda d: d, 
         surveillance_penalty = True,
         penalty_dict = {cooperate: 1, defect: 1, tit_for_tat: 0.95, generous_tit_for_tat: 0.95, win_stay_lose_shift: 0.95}, 
         noise = 0
@@ -338,8 +338,8 @@ class Tournament:
                     country.fitness += self_reward(country)
             
             if playing_each_other:
-                for country_1, country_2, data in self.graph.edges(data=True): # data: include edge-attributes in the iteration
-                    # todo: we are looping though edges twice.. this could be done only once.
+                for country_1, country_2, data in self.graph.edges(data=True): 
+     
                     self.play_prisoners_dilema(country_1, country_2, data)
                     
                     
