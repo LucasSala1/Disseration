@@ -253,10 +253,7 @@ class Tournament:
             - appends history of game
             - changes fitness of country_1 and country_2
             
-        example:
-            >>> country_1, country_2, data = self.graph.get_edge(india, japan)
-            >>> self.play_prisoners_dilema(country_1, country_2, data)
-            XXX check this example
+     
         """
                    
             
@@ -428,12 +425,7 @@ class Tournament:
         returns:
             the tournament object, with data from the simulation inside the
             graph attribute.
-            
-        example: 
-            >>> tournament = Tournament.create_play_tournament(G50, 100, [cooperate, defect, tit_for_tat])
-            ..... <code printed during the simulation>
-            >>> tournament  # now this Tournament can be used for plotting and analytics
-            <UvAAxelrod.tournament.Tournament at 0x7f115d97fcf8>
+
         """
         tournament = cls(countries, 
                  max_rounds, 
